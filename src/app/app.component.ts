@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { addIcons } from 'ionicons';
+import { personCircle, personCircleOutline, sunny, sunnyOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'client';
+  constructor(){
+    addIcons({ personCircle, personCircleOutline, sunny, sunnyOutline });
+  }
 }
