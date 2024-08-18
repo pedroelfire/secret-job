@@ -12,7 +12,7 @@ import { CancionesComponent } from '../components/canciones/canciones.component'
 @NgModule({
   declarations: [
     MainPageComponent,
-    CancionesComponent
+    
   ],
   imports: [
     AppRoutingModule,

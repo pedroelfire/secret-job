@@ -36,6 +36,8 @@
             ],
             "styles": [
               "src/styles.scss",
+              "src/global.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               {
                 "input": "node_modules/@ionic/angular/css/core.css"
               },
@@ -70,7 +72,9 @@
                 "input": "src/theme/variables.css"
               }
             ],
-            "scripts": []
+            "scripts": [
+                  "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -164,6 +168,9 @@
               "browserTarget": "client:build:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
@@ -171,7 +178,8 @@
   "cli": {
     "schematicCollections": [
       "@ionic/angular-toolkit"
-    ]
+    ],
+    "analytics": false
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {
