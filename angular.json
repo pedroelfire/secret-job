@@ -164,6 +164,9 @@
               "browserTarget": "client:build:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
