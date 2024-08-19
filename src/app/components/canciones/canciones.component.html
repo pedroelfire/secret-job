@@ -1,21 +1,22 @@
 <ion-content>
-<div style="display:flex;flex-direction:column;align-items:center; height:100vh; padding: top 40rem;">
-  <iframe style="margin-top: 2rem;" src="https://open.spotify.com/embed/playlist/5qDGn2xFnFoBWgEiuYeOEz" height="500" width="400" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<div style="display:flex; flex-direction:column;align-items:center;  padding: top 40rem; padding-bottom: 8rem;">
+  <iframe style="margin-top: 2rem; height: 30rem; width: 20rem;" src="https://open.spotify.com/embed/playlist/5qDGn2xFnFoBWgEiuYeOEz" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
-<ion-card>
+<div style="margin-top: 2rem;">
+<ion-card >
   <ion-card-header>
-    <ion-card-title>La cancion que mas me recuerda a ti</ion-card-title>
-    <ion-card-subtitle>Mas vale que te guste porque es de mis favs</ion-card-subtitle>
+    <ion-card-title>La cancion que mas me a gustado dedicarte</ion-card-title>
+    <ion-card-subtitle>(Mas vale que te guste porque es de mis favs)</ion-card-subtitle>
   </ion-card-header>
 
 
   <ion-card-content>
-    <iframe style="width: 24rem;" src="https://open.spotify.com/embed/track/7egu63DOhNpivWOpGtzqGS?si=8d659b72fdfb432d"
-     height="100"  frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <iframe style="width: 100%; height: 5rem;" src="https://open.spotify.com/embed/track/7egu63DOhNpivWOpGtzqGS?si=8d659b72fdfb432d"
+       frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
   </ion-card-content>
 </ion-card>
 
-<ion-card>
+<ion-card style="margin-top: 1rem;">
   <ion-card-header>
     <ion-card-title>La cancion que me has dedicado que mas me gusta</ion-card-title>
     <ion-card-subtitle>(Pero nadie lo puede saber)</ion-card-subtitle>
@@ -23,11 +24,38 @@
 
 
   <ion-card-content>
-    <iframe style="width: 24rem;" src="https://open.spotify.com/embed/track/6tu2FHuKL9C8pwNrityweQ?si=40425cfeb48f4aa1"
-     height="100"  frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <iframe style="width: 100%; height: 5rem;"  src="https://open.spotify.com/embed/track/6tu2FHuKL9C8pwNrityweQ?si=40425cfeb48f4aa1" 
+    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
   </ion-card-content>
 </ion-card>
 
+<ion-card style="margin-top: 1rem;">
+  <ion-card-header>
+    <ion-card-title>La cancion que siempre me recuerda a ti</ion-card-title>
+    <ion-card-subtitle>(Aunque sea la menos romantica que encontraste)</ion-card-subtitle>
+  </ion-card-header>
+
+
+  <ion-card-content>
+    <div (click)="showMessage()" style="position: relative; width: 100%; height: 5rem;">
+      <iframe 
+          style="width: 100%; height: 100%;" 
+          src="https://open.spotify.com/embed/track/0j3obufLXq5toSs592dX9U?si=1c22922d6fa1423a" 
+          frameborder="0" 
+          allowtransparency="true" 
+          allow="encrypted-media">
+      </iframe>
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; background: transparent;"></div>
+    </div>
+    <ion-toast
+    [isOpen]="isToastOpen"
+    message="Aun asi la amo ❤️"
+    [duration]="5000"
+    (didDismiss)="isToastOpen = false"
+  ></ion-toast>
+  </ion-card-content>
+</ion-card>
+</div>
 </div>
 
 </ion-content>

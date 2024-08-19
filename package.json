@@ -20,7 +20,10 @@
     "@angular/router": "^16.2.0",
     "@ionic/angular": "^8.2.6",
     "@ionic/cli": "^7.2.0",
+    "angular-timeline": "^1.7.0",
     "bootstrap": "^5.3.3",
+    "primeicons": "^7.0.0",
+    "primeng": "^16.9.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

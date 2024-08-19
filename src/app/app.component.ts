@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { addIcons } from 'ionicons';
 import { personCircle, personCircleOutline, sunny, sunnyOutline } from 'ionicons/icons';
+import { TimelineModule } from 'primeng/timeline';
+
 
 @Component({
   selector: 'app-root',

@@ -1,0 +1,48 @@
+<ion-content>
+  <div style="padding-top: 1rem">
+    <p-timeline
+      [value]="events"
+      align="alternate"
+      styleClass="customized-timeline"
+    >
+      <ng-template pTemplate="marker" let-event>
+        <span
+          style="
+            display: flex;
+            width: 1.8rem;
+            height: 1.8rem;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);"
+          class="flex w-8 h-8 align-items-center justify-content-center text-white border-circle z-1 shadow-1"
+          [style]="{ 'background-color': event.color }"
+        >
+          <i [class]="event.icon"></i>
+        </span>
+      </ng-template>
+      <ng-template pTemplate="content" let-event>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-card style="width: 10rem;">
+              <ion-card-header> Primera interaccion </ion-card-header>
+              <ion-card-subtitle>
+                {{ event.date }}
+              </ion-card-subtitle>
+              <ion-card-content>
+                <p>
+                  {{ event.status }}
+                </p>
+                <img
+                  [src]="event.image"
+                />
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </ion-col>
+      </ng-template>
+    </p-timeline>
+  </div>
+</ion-content>

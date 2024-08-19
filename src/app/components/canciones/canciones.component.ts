@@ -8,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 
 export class CancionesComponent  implements OnInit {
 
+  isToastOpen: boolean = false
+
   constructor() { }
 
   ngOnInit() {}
 
+  showMessage() {
+    console.log("Hola")
+    this.isToastOpen = true;
+  }
 }
+
