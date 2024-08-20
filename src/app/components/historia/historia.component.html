@@ -23,19 +23,20 @@
           <i [class]="event.icon"></i>
         </span>
       </ng-template>
-      <ng-template pTemplate="content" let-event>
+      <ng-template sty pTemplate="content" let-event>
         <ion-col>
           <div class="ion-text-center">
-            <ion-card style="width: 10rem;">
-              <ion-card-header> Primera interaccion </ion-card-header>
+            <ion-card style="width: 14rem;">
+              <ion-card-header> {{event.header}} </ion-card-header>
               <ion-card-subtitle>
                 {{ event.date }}
               </ion-card-subtitle>
               <ion-card-content>
-                <p>
-                  {{ event.status }}
+                <p style="text-align: justify;">
+                  {{ event.description }}
                 </p>
                 <img
+                  style="margin-top: 1rem;"
                   [src]="event.image"
                 />
               </ion-card-content>
